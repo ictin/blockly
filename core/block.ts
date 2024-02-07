@@ -236,7 +236,7 @@ export class Block implements IASTNodeLocation, IDeletable {
     this.workspace = workspace;
 
     this.id =
-      opt_id && !workspace.getBlockById(opt_id) ? opt_id : idGenerator.genUid();
+      opt_id && !workspace.getBlockById(opt_id) ? opt_id : workspace.genUid();
     workspace.setBlockById(this.id, this);
 
     /**
